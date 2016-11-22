@@ -7,7 +7,7 @@ from config import (MAILGUN_BASE_URL, MAILGUN_KEY, FROM_ADDRESS, TO_ADDRESS,
 
 tz = pytz.timezone(STORE_TIMEZONE)
 
-cookie = open('cookie.txt').read()
+cookie = open('cookie.txt').read().strip()
 
 try:
     known_appts = set(json.load(open('known_appts.json')))
